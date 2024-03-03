@@ -1,0 +1,10 @@
+.all-server-bot{
+    display: flex;
+}
+.server-bot{
+    display: flex;
+    flex-direction: column;
+}
+.d-hiden{
+    display:none;
+}
