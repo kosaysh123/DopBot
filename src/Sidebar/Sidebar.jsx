@@ -30,31 +30,56 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
         </span>
       </div>
       <div className="all-server-bot">
-        <div className="server-bot" style={{gap:"20px"}}>
-          <img
-            src={img1}
-            alt=""
-            style={{ width: "70px", borderRadius: "50%", cursor: "pointer" }}
-            onClick={() => {
-              display == false ? setDisplay(true) : setDisplay(false);
-            }}
-          />
-          <img
-            src={img2}
-            alt=""
-            style={{ width: "70px", borderRadius: "50%", cursor: "pointer" }}
-            onClick={() => {
-              display == false ? setDisplay(true) : setDisplay(false);
-            }}
-          />
-          <img
-            src={img3}
-            alt=""
-            style={{ width: "70px", height:"70px", borderRadius: "50%", cursor: "pointer" }}
-            onClick={() => {
-              display == false ? setDisplay(true) : setDisplay(false);
-            }}
-          />
+        <div className="server-bot" style={{ gap: "20px" }}>
+          <NavLink
+            to="/"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+          >
+            <img
+              src={img1}
+              alt=""
+              style={{ width: "70px", borderRadius: "50%", cursor: "pointer" }}
+             
+            />
+          </NavLink>
+
+          <NavLink
+            to="/page1"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+          >
+            <img
+              src={img2}
+              alt=""
+              style={{ width: "70px", borderRadius: "50%", cursor: "pointer" }}
+              
+            />
+          </NavLink>
+
+          <NavLink
+            to="/page2"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+          >
+            <img
+              src={img3}
+              alt=""
+              style={{
+                width: "70px",
+                height: "70px",
+                borderRadius: "50%",
+                cursor: "pointer",
+              }}
+              // onClick={() => {
+              //   display == false ? setDisplay(true) : setDisplay(false);
+              // }}
+            />
+          </NavLink>
+
           <img
             src={img4}
             alt=""
@@ -62,13 +87,10 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             onClick={() => {
               display == false ? setDisplay(true) : setDisplay(false);
             }}
-          />
+          ></img>
         </div>
-        <ul className={display == true ? "sidebar-list active" : "d-hiden"}>
+        {/* <ul className={display == true ? "sidebar-list active" : "d-hiden"}>
           <li className="sidebar-list-item">
-            {/* <a href="">
-              <BsGrid1X2Fill className="icon" /> Dashboard
-            </a> */}
             <NavLink
               to="/"
               className={({ isActive, isPending }) =>
@@ -80,9 +102,6 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             
           </li>
           <li className="sidebar-list-item">
-            {/* <a href="">
-              <BsFillArchiveFill className="icon" /> Products
-            </a> */}
               <NavLink
               to="/page1"
               className={({ isActive, isPending }) =>
@@ -93,9 +112,6 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             </NavLink>
           </li>
           <li className="sidebar-list-item">
-            {/* <a href="">
-              <BsFillGrid3X3GapFill className="icon" /> Categories
-            </a> */}
             <NavLink
               to="/page2"
               className={({ isActive, isPending }) =>
@@ -125,7 +141,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
               <BsFillGearFill className="icon" /> Setting
             </a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </aside>
   );
