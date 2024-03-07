@@ -6,5 +6,6 @@
     flex-direction: column;
 }
 .d-hiden{
-    display:none;
+    /* display:none; */
+    visibility: hidden;
 }

@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import './Sidebar.css'
+import img1 from "../Sidebar/img/pre.jpg";
+import img2 from "../Sidebar/img/zz.jpg";
+import img3 from "../Sidebar/img/xx.jpg";
+import img4 from "../Sidebar/img/cc.jpg";
+import "./Sidebar.css";
 import {
   BsCart3,
   BsGrid1X2Fill,
@@ -10,9 +14,10 @@ import {
   BsMenuButtonWideFill,
   BsFillGearFill,
 } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
 function Sidebar({ openSidebarToggle, OpenSidebar }) {
-    const [display,setDisplay]=useState(true)
+  const [display, setDisplay] = useState(false);
   return (
     <aside
       id="sidebar"
@@ -25,26 +30,80 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
         </span>
       </div>
       <div className="all-server-bot">
-        <div className="server-bot">
-          {/* <button onClick={()=>{display==false? setDisplay(true): setDisplay(false)}}>server 1</button>
-          <button>server 2</button>
-          <button>server 3</button> */}
+        <div className="server-bot" style={{gap:"20px"}}>
+          <img
+            src={img1}
+            alt=""
+            style={{ width: "70px", borderRadius: "50%", cursor: "pointer" }}
+            onClick={() => {
+              display == false ? setDisplay(true) : setDisplay(false);
+            }}
+          />
+          <img
+            src={img2}
+            alt=""
+            style={{ width: "70px", borderRadius: "50%", cursor: "pointer" }}
+            onClick={() => {
+              display == false ? setDisplay(true) : setDisplay(false);
+            }}
+          />
+          <img
+            src={img3}
+            alt=""
+            style={{ width: "70px", height:"70px", borderRadius: "50%", cursor: "pointer" }}
+            onClick={() => {
+              display == false ? setDisplay(true) : setDisplay(false);
+            }}
+          />
+          <img
+            src={img4}
+            alt=""
+            style={{ width: "70px", borderRadius: "50%", cursor: "pointer" }}
+            onClick={() => {
+              display == false ? setDisplay(true) : setDisplay(false);
+            }}
+          />
         </div>
-        <ul className={display==true ? "sidebar-list active" : "d-hiden"}>
+        <ul className={display == true ? "sidebar-list active" : "d-hiden"}>
           <li className="sidebar-list-item">
-            <a href="">
+            {/* <a href="">
               <BsGrid1X2Fill className="icon" /> Dashboard
-            </a>
+            </a> */}
+            <NavLink
+              to="/"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              Home
+            </NavLink>
+            
           </li>
           <li className="sidebar-list-item">
-            <a href="">
+            {/* <a href="">
               <BsFillArchiveFill className="icon" /> Products
-            </a>
+            </a> */}
+              <NavLink
+              to="/page1"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              page1
+            </NavLink>
           </li>
           <li className="sidebar-list-item">
-            <a href="">
+            {/* <a href="">
               <BsFillGrid3X3GapFill className="icon" /> Categories
-            </a>
+            </a> */}
+            <NavLink
+              to="/page2"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
+            >
+              page2
+            </NavLink>
           </li>
           <li className="sidebar-list-item">
             <a href="">

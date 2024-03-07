@@ -17,7 +17,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 
 // const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = [ "Logout"];
 
 function Header({ OpenSidebar }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
