@@ -1,5 +1,7 @@
 .all-server-bot{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .server-bot{
     display: flex;
@@ -8,4 +10,9 @@
 .d-hiden{
     /* display:none; */
     visibility: hidden;
+}
+.sidebar-brand{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }

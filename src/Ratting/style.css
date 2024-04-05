@@ -1,0 +1,49 @@
+/* body{
+    background: url(/photo/hi.png) no-repeat;
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
+
+.perant{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+    background-color: #374052;
+    gap: 20px;
+}
+.child-1,
+.child-2,
+.child-3,
+.child-4{
+    border: solid 1px rgb(70, 69, 69);
+    border-radius: 19px;
+    padding: 19px;
+    /* width: calc(60% / 4); */
+    background-color: #25262b;
+    width: 400px;
+}
+.photo-div{
+    display: flex;
+    align-items: center;
+}
+.rank,
+.credit,
+.points,
+.reputation{
+    font-size: 20px;
+    padding-left: 30px;
+}
+.rank-div,
+.credit-div,
+.points-div,
+.repu-div{
+    padding-top: 15px;
+    padding-left: 5px;
+}
+
+.num{
+    font-size: 1.1em;
+    padding-left: 10px;
+}
+

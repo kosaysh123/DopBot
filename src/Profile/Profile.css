@@ -1,0 +1,167 @@
+/* body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--backgroundcolor);
+    color: var(--textcolor);
+    box-sizing: border-box;
+    direction: rtl;
+} */
+
+:root{
+    --backgroundcolor: #201f25;
+    --textcolor:white;
+    --secendarytextcolor:#818a99;
+    --buttoncolor: #5463e9;
+    --inputcolor:#25262b;
+    --borderinput:#404048;
+}
+.server-header{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: rgba(245, 222, 179, 0.048);
+    border-radius: 20px;
+    box-shadow: 1px 1px 9px 0px white;
+    min-height: 312px;
+    justify-content: space-between;
+    
+}
+.KO-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+
+}
+.server{
+    /* margin-right: 30px; */
+    font-size: 30px;
+    margin: 10px;
+    color: white;
+}
+.p-header{
+    color:var(--secendarytextcolor);
+   
+    /* position: relative; */
+    font-family: A;
+    font-weight: 500;
+    font-size: 18px;
+    align-items: center;
+}
+
+.tow-buttons{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-div{
+    /* align-self: center; */
+    margin-left: 10px;
+}
+.edit-button{
+    cursor: pointer;
+    color: var(--textcolor) !important;
+    background: var(--buttoncolor) !important;
+    padding: 10px 25px !important;
+    border-radius: 6px !important;
+    align-self: center !important;
+}
+
+
+
+.lists{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    margin-left: 30px;
+    margin-top: 30px;
+    row-gap: 10px;
+    
+}
+.abbre-p{
+    color: var(--secendarytextcolor);
+    margin-right: 30px;
+}
+.abbre{
+    background-color: var(--inputcolor);
+    border: 1px solid var(--borderinput);
+    width: 90%;
+    margin-right: 30px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.rooms-rules-p{
+    margin-right: 30px;
+    color: var(--secendarytextcolor);
+}
+.rooms-roles{
+    width: 95%;
+    background-color: var(--inputcolor);
+    border: 1px solid var(--borderinput);
+    color: var(--textcolor);
+    margin-right: 30px;
+    height: 50px;
+    border-radius: 5px;
+    
+}
+.massage-1-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 30px 30px 1px;
+}
+.but-num-1{
+    background-color: var(--secendarytextcolor);
+    width: 63px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 100px;
+    position: relative;
+    transition: 0.2s;
+}
+.but-num-1::before{
+    position: absolute;
+    content: "";
+    background-color:var(--textcolor);
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    margin-bottom:2px;
+    transition: 0.2s;
+}
+input:checked + .but-num-1{
+    background-color: var(--buttoncolor);
+}
+input:checked + .but-num-1::before{
+    transform: translateX(37px);
+}
+.massage-2-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 30px 30px 1px;
+}
+.save-changes-div{
+    margin-right: 30px;
+}
+.save-changes{
+    margin-left: 10px;
+    background-color: var(--buttoncolor);
+    text-decoration: none;
+    color: var(--textcolor);
+    border: 1px solid var(--borderinput);
+    padding: 10px 25px;
+    border-radius: 6px;
+}
+.cancel{
+    text-decoration: none;
+    color: var(--textcolor);
+    border: 1px solid var(--borderinput);
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+

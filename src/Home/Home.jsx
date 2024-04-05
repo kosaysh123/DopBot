@@ -6,18 +6,19 @@ import
  { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } 
  from 'recharts';
  import { HashRouter  , Routes, Route } from "react-router-dom";
-import Page1 from '../Pages/Page1/Page1';
-import Page2 from '../Pages/Page2/Page2';
 import MainHome from '../Pages/MainHome/MainHome';
+import MainBotPage from '../Pages/MainBotPage/MainBotPage';
 
 function Home() {
   return (
-    
-    <Routes>
+    <div style={{width:"100%" ,height:"100vh" , backgroundColor: "#263043eb"}}>
+       <Routes>
     <Route path="/" exact={true} Component={MainHome} />
-      <Route path="/page1" exact={true} Component={Page1} />
-      <Route path="/page2" exact={true} Component={Page2} />
+      <Route path="/page1" exact={true} Component={MainBotPage} />
+      {/* <Route path="/page2" exact={true} Component={MainBotPage} /> */}
     </Routes>
+    </div>
+   
     
   )
 }

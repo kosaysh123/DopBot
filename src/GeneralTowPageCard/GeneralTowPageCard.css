@@ -1,0 +1,120 @@
+:root {
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
+  --main-transimtion-dur: 0.3s;
+  --padding-top: 50px;
+  --padding-bottom: 70px;
+  --main-backgroung: #ececec;
+}
+.Tow-page-h3{
+  font-family: A;
+    font-weight: 200;
+    font-size: 25px;
+}
+.services .conterner{
+  margin: 10px auto;
+}
+.services .conterner .box {
+  background-color: white;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0, 0, 0 / 12%);
+  counter-increment: ser;
+  position: relative;
+  min-height: 280px;
+  width: 400px;
+  transition: var(--main-transimtion-dur);
+  overflow: hidden;
+}
+.services .conterner .box::before {
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  height: 6px;
+  background-color: var(--main-color);
+  top: -1px;
+  width: 0px;
+  position: absolute;
+  transition: var(--main-transimtion-dur);
+}
+.services .conterner .box:hover::before {
+  width: 100%;
+}
+.services .conterner .box:hover {
+  transform: translateY(-10px);
+}
+.services .conterner .box .icon1 {
+  margin: 30px auto 20px;
+  text-align: center;
+  display: block;
+  color: #bdbdbd;
+}
+.services .conterner .box > h3 {
+  text-align: center;
+  color: var(--main-color);
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.services .conterner .box .info {
+  background-color: #d5d5d52e;
+  position: relative;
+  bottom: 0px;
+}
+.number-card {
+  bottom: 0;
+  position: absolute;
+  background-color: var(--main-color);
+  height: 100%;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+}
+/* .services .conterner .box .info::before {
+  content: "" ;
+  bottom: 0;
+  position: absolute;
+  background-color: var(--main-color);
+  height: 100%;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+} */
+.services .conterner .box .info::after {
+  content: "";
+  position: absolute;
+  left: 65px;
+  height: 100%;
+  background-color: #d5d5d5;
+  width: 50px;
+  top: 0;
+  transform: skewX(-30deg);
+}
+.services .conterner .box .info a {
+  padding: 14px 15px;
+  display: block;
+  text-align: right;
+  color: var(--main-color);
+  text-decoration: none !important;
+  right: -300px;
+}
+.icon-services{
+  width: 90px;
+}
+.At-developer {
+  background-color: #E91E63;
+  color: white;
+  padding: 0px 50px;
+  font-size: 20px;
+  transform: rotate(-40deg);
+  top: 26px;
+  left: -38px;
+  border-radius: 9px;
+}

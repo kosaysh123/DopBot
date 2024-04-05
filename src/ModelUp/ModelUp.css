@@ -1,0 +1,28 @@
+.co {
+    color: blue;
+  }
+.co span {
+    color: red;
+  }
+  .pl {
+    text-align: right;
+  }
+  .from-select {
+    width: 1000px;
+    height: 200px;
+  }
+  
+  .oi {
+    /* background-color: rgba(63, 71, 63, 0.31);
+    height: auto;
+    width: auto; */
+  }
+  .pa {
+    text-align: right;
+    color: antiquewhite;
+    height: auto;
+    width: auto;
+  }
+  .form-control{
+    resize: none;
+  }
